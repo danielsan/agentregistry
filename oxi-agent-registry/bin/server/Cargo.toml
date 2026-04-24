@@ -1,0 +1,43 @@
+[package]
+name = "oxi-server"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[[bin]]
+name = "oxi-server"
+path = "main.rs"
+
+[dependencies]
+# Internal crates
+oxi-core = { workspace = true }
+oxi-database = { workspace = true }
+oxi-api = { workspace = true }
+oxi-mcp = { workspace = true }
+oxi-auth = { workspace = true }
+oxi-daemon = { workspace = true }
+
+# Async runtime
+tokio = { workspace = true }
+
+# Web framework
+axum = { workspace = true }
+tower = { workspace = true }
+tower-http = { workspace = true }
+hyper = { workspace = true }
+
+# Logging & Tracing
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+tracing-opentelemetry = { workspace = true }
+opentelemetry = { workspace = true }
+opentelemetry-otlp = { workspace = true }
+opentelemetry_sdk = { workspace = true }
+
+# Error handling
+anyhow = { workspace = true }
+
+# Env & Config
+dotenvy = { workspace = true }

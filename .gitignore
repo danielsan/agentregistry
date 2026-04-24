@@ -22,6 +22,7 @@ go.work
 
 # Build artifacts
 bin/
+!oxi-agent-registry/bin/
 arctl
 
 # UI build artifacts
@@ -55,4 +56,8 @@ Thumbs.db
 charts/agentregistry/Chart.yaml
 
 _output/
+
+# Rust
+oxi-agent-registry/target/
+**/Cargo.lock
 

@@ -1,0 +1,38 @@
+[package]
+name = "oxi-cli"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[[bin]]
+name = "arctl"
+path = "main.rs"
+
+[dependencies]
+# Internal crates
+oxi-core = { workspace = true }
+oxi-cli-lib = { workspace = true }
+
+# CLI
+clap = { workspace = true }
+clap_complete = { workspace = true }
+
+# Terminal UI
+indicatif = { workspace = true }
+console = { workspace = true }
+dialoguer = { workspace = true }
+
+# Async runtime
+tokio = { workspace = true }
+
+# Error handling
+anyhow = { workspace = true }
+
+# Logging & Tracing
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+
+# Env & Config
+dotenvy = { workspace = true }
